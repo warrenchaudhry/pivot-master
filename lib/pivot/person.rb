@@ -12,6 +12,7 @@ module Pivot
     end
 
     def add_item(item)
+      return unless item.is_a?(Item)
       items << item
       item.assignee = email
       yield if block_given?

@@ -13,6 +13,7 @@ module Pivot
     end
 
     def +(other_item)
+      return points unless other_item.is_a?(Item)
       points + other_item.points
     end
 
